@@ -1,0 +1,325 @@
+import React from "react";
+import { Separator } from "@/components/ui/separator"
+
+
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+
+export default function DashboardHome() {
+
+  return (
+    <>
+<div className="sticky border bg-white rounded-lg mt-10">
+    <div className="z-999 inline-block pl-5 sticky top-12 bg-white-200 rounded-lg w-380">
+      <Button variant="secondary" className = "top-5">All</Button>
+      <Button variant="outline" className = "top-5">Programming</Button>
+      <Button variant="outline" className = "top-5">Web-Development</Button>
+      <Button variant="outline" className = "top-5">Game Dev</Button>
+      <Button variant="outline" className = "top-5">David Goggins</Button>
+      <Button variant="outline" className = "top-5">Motivation</Button>
+      <Button variant="outline" className = "top-5">90's music</Button>
+      <Button variant="outline" className = "top-5">20's music</Button>
+      <Button variant="outline" className = "top-5">Five Night's At Freddy's</Button>
+      <Button variant="outline" className = "top-5">Japan pop rock</Button>
+      <Button variant="outline" className = "top-5">Nakano Miku</Button>
+      <Button variant="outline" className = "top-5">MiSide</Button>
+      <Button variant="outline" className = "top-5">Mita</Button>
+    </div>
+
+    <div className = "mt-10">
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out border-none">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/every_breath_you take.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="object-cover inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="text-xl relative left-3">
+            <Link href="/Every_breath_you_take" rel="noopener noreferrer">
+                          The Police- Every breath you take<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">500K views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/multo.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/multo" rel="noopener noreferrer">
+                          Cup of Joe- Multo<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">3M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/walking_back_home.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/walking_back_home" rel="noopener noreferrer">
+                         Fur- Walking back home<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/about_you.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/about_you" rel="noopener noreferrer">
+                         The 1975- About you<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/without_you.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/without_you" rel="noopener noreferrer">
+                        Air Supply- Without you<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/wasted.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md "
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/wasted" rel="noopener noreferrer">
+                       Juice Wrldf, Lil Uzi Vert- Wasted<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">2M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+        src = "/end_of_beginning.jpg"
+        alt = "end of beginning"
+        width = {440}
+        height = {440}
+        className = "inline-block rounded-md"
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/end_of_beginning" rel="noopener noreferrer">
+                       Djo- End of Beginning<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+              <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/your_song.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md "
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/your_song" rel="noopener noreferrer">
+                       Parokya ni- Edgar- Your song<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+      <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
+      <figure className="p-5 rounded-md">
+        <Image
+          src="/foolish_heart.jpg"
+          alt="Homepage"
+          width={440}
+          height={440}
+          className="inline-block rounded-md "
+        />
+        <figcaption className="h-20">
+          <div className = "ml-1 m-2">
+          <Avatar className="float-left">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          <span className="relative left-3 text-xl">
+            <Link href="/foolish_heart" rel="noopener noreferrer">
+                       Steve Perry- Foolish heart<br/>
+                          </Link></span>
+
+          <div className="relative left-3 inline-block text-gray-500 text-md">
+            <span className="text-gray-500">Ethan-bytes101001</span>
+            <span className="text-gray-500">&nbsp;&nbsp;&nbsp;•</span>
+            <span className="text-gray-500 ml-3">10M views</span>
+          </div>
+          </div>
+        </figcaption>
+      </figure>
+      </div>
+
+
+
+      </div>
+
+    </div>
+
+    </>
+  );
+}

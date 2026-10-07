@@ -1,0 +1,330 @@
+'use client';
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
+import Image from "next/image";
+
+import { Separator } from "@/components/ui/separator";
+import { Label } from "@/components/ui/label";
+import { Sheet,
+         SheetClose,
+         SheetContent,
+         SheetDescription,
+         SheetFooter,
+         SheetHeader,
+         SheetTitle,
+         SheetTrigger,
+        } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+
+import { SearchIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
+import { Input } from "@/components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Calculator,
+  Calendar,
+  CreditCard,
+  Settings,
+  Smile,
+  User,
+} from "lucide-react"
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+export default function DashboardLayout({ children }: { children: React.ReactNode }): React.ReactNode {
+  return (
+    <div>
+<div className="shadow-xl border flex p-1 items-center justify-between fixed bg-white top-0 left-0 right-0 z-50">
+
+        <div className="relative left-4 pr-15">
+          <Sheet >
+      <SheetTrigger asChild>
+         <Image
+         src="/menu.png"
+         alt="Like"
+         width={25}
+         height={25}
+         className="inline-block cursor-pointer" />
+
+      </SheetTrigger>
+      <SheetContent side = "left" className = "opacity-90 w-100 sm:w-60">
+        <SheetHeader>
+          <ul className="-ml-5 mt-0">
+     <li className = "relative left-4">
+<Tooltip>
+  <TooltipTrigger asChild>
+    <Link href="/dashboard" rel="noopener noreferrer">
+      <span className="inline-flex items-center">
+        <Image
+          src="/youtube.png"
+          alt="YouTube Logo"
+          width={37}
+          height={37}
+          className="inline-block relative left-5"
+        />
+        <h1 className="inline-block text-2xl font-bold left-7 relative">
+          Youtube<sup className="text-sm">PH</sup>
+        </h1>
+      </span>
+    </Link>
+  </TooltipTrigger>
+
+  <TooltipContent>
+    <p className="bg-gray">Youtube Home</p>
+  </TooltipContent>
+</Tooltip>
+
+
+          <Separator/>
+          <ul>
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+          <Image src="/bahay.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
+        <span className = "relative left-5">
+                    <Link href="/dashboard" rel="noopener noreferrer">
+                          Home
+                    </Link>
+        </span>
+       </li>
+
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/shorts.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
+         <span className = "relative left-5">Shorts</span>
+       </li>
+
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/subscription.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Subscription</span>
+       </li>
+
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/movies.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">History</span>
+       </li>
+      <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/history.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Playlist</span>
+       </li>
+
+
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/music.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Watch later</span>
+       </li>
+
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/gaming.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Liked videos</span>
+       </li>
+
+ <Separator/>
+ <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+         More from Youtube
+         </h4>
+          <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/youtube.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Youtube Premium</span>
+       </li>
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/yt-studio.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Youtube Studio</span>
+       </li>
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/yt-music.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Youtube Music</span>
+       </li>
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/yt-kids.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Youtube kids</span>
+       </li>
+       </ul>
+ <Separator/>
+        <ul className = "relative top-6">
+       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/download.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Downloads</span>
+       </li>
+        <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/feedback.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Send Feedback</span>
+       </li>
+        <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+         <Image src="/about.png" alt="Homepage" width={28} height={28} className="inline-block" />
+         <span className = "relative left-5">Help</span>
+       </li>
+        </ul>
+     </li>
+       </ul>
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
+          <Link href="/dashboard" rel="noopener noreferrer">
+          <Image
+            src="/youtube.png"
+            alt="YouTube Logo"
+            width={37}
+            height={37}
+            className="inline-block relative left-5"
+          />
+          <h1 className="inline-block text-2xl font-bold left-7 relative">
+            Youtube<sup className="text-sm">PH</sup>
+          </h1>
+          </Link>
+        </div>
+           <Popover>
+  <PopoverTrigger asChild>
+    <ButtonGroup
+      className="relative cursor-pointer"
+      style={{ right: "30px" }}
+    >
+      <Input
+        placeholder="Search..."
+        className="w-150 h-10 rounded-r-none"
+      />
+
+      <Button
+        variant="outline"
+        aria-label="Search"
+        className="h-10 hover:bg-gray-100 rounded-l-none"
+      >
+        <SearchIcon />
+      </Button>
+    </ButtonGroup>
+  </PopoverTrigger>
+
+  <PopoverContent className="p-0 relative left-[-175]">
+    <Command className=" rounded-lg border shadow-md md:min-w-[640px]">
+        <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+          <CommandItem>
+            <span> <Link href="/multo" rel="noopener noreferrer">Multo</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/about_you" rel="noopener noreferrer">About you</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/walking_back_home" rel="noopener noreferrer">Walking back home</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/foolish_heart" rel="noopener noreferrer">Foolish heart</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/end_of_beginning" rel="noopener noreferrer">End of beginning</Link></span>
+          </CommandItem>
+      </CommandList>
+    </Command>
+  </PopoverContent>
+</Popover>
+
+
+ <div className="absolute left-250">
+  <Tooltip>
+      <TooltipTrigger asChild>
+          <Image
+            src="/microphone.png"
+            alt="Microphone"
+            width={25}
+            height={25}
+            className="inline-block"
+          />
+      </TooltipTrigger>
+      <TooltipContent>
+        <p className = "bg-gray">Search with your voice</p>
+      </TooltipContent>
+    </Tooltip>
+                  </div>
+
+<div className = "relative left-40">
+          <Popover>
+  <PopoverTrigger asChild>
+          <Button variant = "outline">Create<span className = "text-2xl">+</span></Button>
+
+  </PopoverTrigger>
+  <PopoverContent className = "w-40">
+         <ul>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Upload Video</li>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Go live</li>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Create post</li>
+         </ul>
+    </PopoverContent>
+</Popover>
+        </div>
+
+<Popover >
+  <PopoverTrigger className = "mb-7">
+    <Image
+          src="/notification.png"
+          alt="Notifications"
+          width={30}
+          height={30}
+          className="absolute" style={{ left: "1400px" }}
+        />
+</PopoverTrigger>
+  <PopoverContent className = "relative top-8 left-20 w-50 cursor-pointer">
+     <h4 className="scroll-m-20 text-md text-center font-semibold tracking-tight">
+      Notification
+    </h4>
+
+    </PopoverContent>
+</Popover>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger className="top-4">
+            <Image
+              src="/profile-user.png"
+              alt="Profile"
+              width={32}
+              height={32}
+              className="mr-7 inline-block cursor-pointer"
+            />
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent>
+            <DropdownMenuLabel>
+              <Link href="profile" rel="noopener noreferrer">Profile</Link>
+            </DropdownMenuLabel>
+
+            <DropdownMenuLabel>
+              <Link href="/positions" rel="noopener noreferrer">Positions</Link>
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+
+
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+
+      </div>
+      {children}
+    </div>
+  );
+}
